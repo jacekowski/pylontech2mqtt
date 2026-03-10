@@ -1,0 +1,44 @@
+---
+name: Pylontech battery Add-on (dev)
+version: 2026.01.01
+slug: hass-addon-pylontech
+description: Add-on for the pylontech battery
+startup: services
+boot: auto
+url: "https://github.com/jacekowski/pylontech2mqtt"
+uart: true
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports: {}
+ports_description: {}
+host_network: false
+map:
+  - share:rw
+options:
+  MQTT_HOST: 10.42.99.189
+  MQTT_PORT: 1883
+  MQTT_USERNAME: ""
+  MQTT_PASSWORD: ""
+  PYLONTECH_ID: "Y220815C50100255"
+  PYLONTECH_SERIAL: "Y220815C50100255"
+  SENSOR_PREFIX: "pylontech"
+  PORT: "502"
+  HOST: "10.42.10.207"
+  DEBUG: 0
+  MAX_BATT: 6
+schema:
+  MQTT_HOST: str
+  MQTT_PORT: port
+  MQTT_USERNAME: str
+  MQTT_PASSWORD: password
+  PYLONTECH_ID: str
+  PYLONTECH_SERIAL: str
+  SENSOR_PREFIX: str
+  PORT: str?
+  HOST: str?
+  DEBUG: int
+  MAX_BATT: int
