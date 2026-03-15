@@ -1,5 +1,4 @@
 paho-mqtt==1.6.1
 pyserial==3.5
 construct==2.10.70
-
-
+PyYAML==6.0.2
