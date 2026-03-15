@@ -18,6 +18,7 @@ ports_description: {}
 host_network: false
 map:
   - share:rw
+init: false
 options:
   MQTT_HOST: 10.42.99.189
   MQTT_PORT: 1883
