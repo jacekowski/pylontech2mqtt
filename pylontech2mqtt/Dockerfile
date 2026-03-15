@@ -2,11 +2,12 @@
 ARG BUILD_FROM
 FROM $BUILD_FROM
 
-COPY rootfs/requirements.txt /tmp/
+COPY requirements.txt /tmp/
 RUN pip install -r /tmp/requirements.txt
 
 # Copy root filesystem
-COPY rootfs /usr/bin/pylontech/
+COPY rootfs /
 
-RUN chmod +x /usr/bin/pylontech/pylontech.py
+RUN chmod +x /usr/bin/run.sh
+
 

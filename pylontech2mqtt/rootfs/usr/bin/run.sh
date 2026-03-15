@@ -8,12 +8,6 @@ if [ -z ${STANDALONE+x} ]; then
 else
   echo "RUNNING IN STANDALONE MODE"
 fi
-export CONFIG_FILE=/config/panels.yaml
-if test -f "$CONFIG_FILE"; then
-    echo "$CONFIG_FILE exists."
-else
-    cp /usr/bin/mqtt-manager/panels.yaml.example $CONFIG_FILE
-fi
 
 declare LOGLEVEL
 declare logtofile
@@ -22,5 +16,5 @@ logtofile=$(bashio::config 'logtofile')
 
 export LOGLEVEL
 
-python /usr/bin/pylontech/pylontech.py
+python /usr/bin/pylontech.py
 

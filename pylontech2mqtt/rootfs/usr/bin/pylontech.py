@@ -1,4 +1,4 @@
-#!/bin/python3
+#!python
 from typing import Dict
 import logging
 import serial
