@@ -4,7 +4,8 @@ import logging
 import serial
 import construct
 import socket
-import time 
+import time
+import json
 from pathlib import Path
 import sys
 
@@ -357,7 +358,7 @@ def startup() -> None:
     hassosf = Path("/data/options.json")
     if hassosf.exists():
         logger.info("Loading HASS OS configuration")
-        OPT.update(loads(hassosf.read_text(encoding="utf-8")))
+        OPT.update(json.loads(hassosf.read_text(encoding="utf-8")))
     else:
         logger.info(
             "Local test mode - Defaults apply. Pass MQTT host & password as arguments"
