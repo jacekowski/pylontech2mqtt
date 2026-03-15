@@ -1,5 +1,5 @@
 name: Pylontech battery Add-on (dev)
-version: 2026.01.01
+version: 2026.01.02
 slug: hass-addon-pylontech
 description: Add-on for the pylontech battery
 url: "https://github.com/jacekowski/pylontech2mqtt"
