@@ -1,10 +1,7 @@
----
 name: Pylontech battery Add-on (dev)
 version: 2026.01.01
 slug: hass-addon-pylontech
 description: Add-on for the pylontech battery
-startup: services
-boot: auto
 url: "https://github.com/jacekowski/pylontech2mqtt"
 uart: true
 arch:
@@ -13,11 +10,6 @@ arch:
   - armhf
   - armv7
   - i386
-ports: {}
-ports_description: {}
-host_network: false
-map:
-  - share:rw
 init: false
 options:
   MQTT_HOST: 10.42.99.189
